@@ -16,7 +16,6 @@ services:
       - app-network
 
   frontend:
-    stdin_open: true
     container_name: frontend
     build:
       context: .
@@ -24,7 +23,6 @@ services:
     volumes:
       - ./src/frontend/node_modules:/app/node_modules
       - ./src/frontend:/var/www/html/
-      - .src/frontend:/app/
     networks:
       - app-network
 
